@@ -1,0 +1,130 @@
+<html>
+        <head>
+           <title>My Front Page</title>
+           <style>
+               span{
+                   padding: 10px;
+                   color:white;
+       
+                  
+                  }
+               
+               h1{
+                   text-align:center;
+                   background-color: red;
+                   margin-top: 0px;
+                   color:white;
+                   width:100%;
+                   padding: 20px;
+                   position: fixed;
+                   top:0px;
+                   left:0px;
+                   
+               }
+       
+               nav{
+                   background-color:brown;
+                   padding: 5px;
+                   border-top: solid orange 2px;
+                   border-bottom: solid orange 2px;
+                   width:100%;
+                   position: fixed;
+                   left:0px;
+                   top:76px;
+       
+               } 
+       
+               a{
+                   text-decoration: none;
+                   color:white;
+               }
+       
+               div{
+                   position:fixed;
+                   bottom:0px;
+                   left:0px;
+                   background:rgba(0,0,0,0.2);
+                   color:white;
+                   width:100%;
+                   margin-top:20px;
+                   padding: 10px;
+       
+               } 
+       
+               p {
+                   font-size:15px;
+               }
+       
+               #control{
+                   padding:10px;
+                   background-color: black;
+                   color:white;
+                   width:13%;
+                   margin-left: 490px;
+               }
+       
+               video {
+                   position: fixed;
+                   top:108px;
+                   left:0px;
+               } 
+           </style>
+        </head>
+        <body>
+          <h1><em>Marvel Cinematic Universe<em></h1>
+        <nav>	
+            <span><a href="#">Power Stone</a></span>
+            <span><a href="#">Space Stone</a></span>
+            <span><a href="#">Reality Stone</a></span>
+            <span><a href="#">Soul Stone</a></span>
+            <span><a href="#">Time Stone</a></span>
+            <span><a href="#">Mind Stone</a></span>
+       
+        </nav>
+       
+        <video id="Avengers" controls autoplay loop onclick="videoevent()">
+           <source src="Jonas Brothers-Sucker.mp4" type="video/mp4">
+        </video>
+       
+        <div>
+           <h2>Avengers:Infinity War</h2>
+           <p><em>In the film, the Avengers and the Guardians of the Galaxy attempt to prevent Thanos from collecting the six all-powerful Infinity Stones as part of his quest to kill half of all life in the universe.Iron Man, Thor, the Hulk and the rest of the Avengers unite to battle their most powerful enemy,the evil Thanos. On a mission to collect all six Infinity Stones, Thanos plans to use the artifacts to inflict his twisted will on reality. The fate of the planet and existence itself has never been more uncertain as everything the Avengers have fought for has led up to this moment.</em></p>
+       
+           <button id="control" onclick="clickevent()">Play</button>
+        </div>
+       
+        <script type="text/javascript">
+           
+           var video=document.getElementById("Avengers");
+           var button=document.getElementById("control");
+           
+           function videoevent() {
+                if(video.paused)
+                {
+                   button.innerHTML="Pause";
+                }
+                else
+                {
+                   button.innerHTML="Play";
+                }
+           }
+            
+            function clickevent() {
+            
+                if(video.paused)
+                {
+                   video.play();
+                   button.innerHTML="Pause";
+                }
+                else
+                {
+                   video.pause();
+                   button.innerHTML="Play";
+                }
+           }
+        
+        </script>
+       
+       
+        </body>
+        </html>
